@@ -47,7 +47,6 @@ function App() {
   let dist: number = 0;
   let overlaps: boolean = false;
   function checkPush(w, h) {
-
     if (position.length == 0) {
       position.push(new Position(w, h));
       setPosition([...position]);
