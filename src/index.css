@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.global-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.reduced-container{
+  margin: 0;
+
+  z-index:1;
+
+  background-color: rgb(255, 255, 255);
+  width: calc(100% - 120px);
+  height: calc(100% - 120px);
+}
+
+.button-container{
+  z-index: 100;
+  width: 160px;
+  height: 80px;
+
+  position: fixed;
+  display: block; 
+  margin: 0 auto;
+  bottom: 0;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+
+  background-color: rgb(0, 0, 0, 0.05);
+
+  border-radius: 40px 40px 0px 0px;
+}
+
+.increment{
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  background-color: rgb(0, 102, 255, 0.35);
+  -webkit-transition: background-color 0.2s;
+
+  color: white;
+
+  cursor: pointer;
+}
+.increment :hover{
+  height: 60px;
+  width: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  background-color: rgb(0, 102, 255);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.decrement{
+  height: 60px;
+  width: 60px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  border-radius: 100%;
+  background-color: rgb(255, 0, 0, 0.35);
+  
+  text-align: center;
+  text-justify: center;
+  color: white;
+  cursor: pointer;
+}
+
+.decrement :hover{
+  height: 60px;
+  width: 60px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  border-radius: 100%;
+  background-color: rgb(255, 0, 0);
+  -webkit-transition: background-color 0.2s;
+  
+  color: white;
+  cursor: pointer;
+}
+
+.buttonInner{
+  height: 60px;
+  width: 60px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
