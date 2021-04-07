@@ -18,9 +18,6 @@ class Position {
   getH(): number {
     return this.h;
   }
-  getC(): number {
-    return this.h;
-  }
 }
 
 function App() {
@@ -53,7 +50,6 @@ function App() {
 
     if (position.length == 0) {
       position.push(new Position(w, h));
-
       setPosition([...position]);
     } else {
       for (let len = 0; len < position.length; len++) {
