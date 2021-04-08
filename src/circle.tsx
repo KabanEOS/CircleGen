@@ -1,6 +1,4 @@
-import React from "react";
 import "./Circle.css";
-import { IoIosAdd, IoIosRemove } from "react-icons/io";
 
 let i: number = 0;
 

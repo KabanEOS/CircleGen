@@ -119,3 +119,13 @@ code {
   justify-content: center;
   text-align: center;
 }
+
+.reduced-container{
+  margin: 0;
+
+  z-index:1;
+
+  background-color: rgb(255, 255, 255);
+  width: calc(100% - 120px);
+  height: calc(100% - 120px);
+}
