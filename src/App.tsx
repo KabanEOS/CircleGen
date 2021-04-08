@@ -2,7 +2,11 @@ import { IoIosAdd, IoIosRemove } from "react-icons/io";
 import { useState } from "react";
 import { Position } from "./Position";
 import { Circle } from "./circle";
-import { getRandomIntInclusive, getRandomPosition, overlapsExisting } from "./MathPos";
+import {
+  getRandomIntInclusive,
+  getRandomPosition,
+  overlapsExisting,
+} from "./MathPos";
 
 export const App = () => {
   var [position, setPosition] = useState<Position[]>([]);
