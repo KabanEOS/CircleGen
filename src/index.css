@@ -22,16 +22,6 @@ code {
   background-color: rgb(255, 255, 255);
 }
 
-.reduced-container{
-  margin: 0;
-
-  z-index:1;
-
-  background-color: rgb(255, 255, 255);
-  width: calc(100% - 120px);
-  height: calc(100% - 120px);
-}
-
 .button-container{
   z-index: 100;
   width: 160px;

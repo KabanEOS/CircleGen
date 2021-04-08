@@ -1,26 +1,17 @@
-import React, { useState } from "react";
+// import React, { Component} from "react";
+import * as React from "react";
 import "./App.css";
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
+import { render } from "@testing-library/react";
+import { useState } from "react";
+import { getRandomIntInclusive } from "./utils";
+import { Position } from "./Position";
 import { Circle } from "./circle";
 
-class Position {
-  w: number;
-  h: number;
+let dist: number = 0;
+let overlaps: boolean = false;
 
-  constructor(w: number, h: number) {
-    this.w = w;
-    this.h = h;
-  }
-
-  getW(): number {
-    return this.w;
-  }
-  getH(): number {
-    return this.h;
-  }
-}
-
-function App() {
+export const App = () => {
   var [position, setPosition] = useState<Position[]>([]);
 
   function inc() {
@@ -30,23 +21,17 @@ function App() {
     let rndW: number = getRandomIntInclusive(0, maxW);
     let rndH: number = getRandomIntInclusive(0, maxH);
 
-    checkPush(rndW, rndH);
+    MathCount(rndW, rndH);
   }
 
   function dec() {
+    if (position.length === 0) return;
+
     position.pop();
     setPosition([...position]);
   }
 
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  let dist: number = 0;
-  let overlaps: boolean = false;
-  function checkPush(w, h) {
+  function MathCount(w, h): void {
     if (position.length == 0) {
       position.push(new Position(w, h));
       setPosition([...position]);
@@ -77,7 +62,6 @@ function App() {
           {position.map((val) => (
             <Circle position={val} />
           ))}
-          {console.log(position)}
         </div>
         <div className="button-container">
           <div className="increment" onClick={inc}>
@@ -91,5 +75,5 @@ function App() {
       </div>
     </div>
   );
-}
+};
 export default App;
